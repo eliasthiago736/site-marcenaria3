@@ -1892,4 +1892,595 @@ function vfReiniciar(){
 </script>
 
 </body>
+<!-- =========================================
+     GALERIA VF MARCENARIA
+========================================= -->
+
+<section class="vf-galeria" id="galeria">
+
+    <div class="galeria-cabecalho">
+        <span>VF MARCENARIA</span>
+        <h2>Nossos Projetos</h2>
+        <p>
+            Conheça alguns dos nossos trabalhos e inspire-se
+            para criar seu próximo móvel planejado.
+        </p>
+    </div>
+
+    <!-- FILTROS -->
+
+    <div class="galeria-filtros">
+        <button class="ativo" onclick="filtrarGaleria('todos', this)">
+            Todos
+        </button>
+
+        <button onclick="filtrarGaleria('cozinha', this)">
+            Cozinhas
+        </button>
+
+        <button onclick="filtrarGaleria('quarto', this)">
+            Quartos
+        </button>
+
+        <button onclick="filtrarGaleria('sala', this)">
+            Salas
+        </button>
+
+        <button onclick="filtrarGaleria('banheiro', this)">
+            Banheiros
+        </button>
+    </div>
+
+
+    <!-- FOTOS -->
+
+    <div class="galeria-grid">
+
+        <div class="foto-projeto cozinha">
+            <img
+                src="imagens/cozinha-1.jpg"
+                alt="Cozinha planejada VF Marcenaria"
+                onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+                <small>COZINHA</small>
+                <h3>Cozinha Planejada</h3>
+                <p>Móveis personalizados e acabamento premium.</p>
+            </div>
+        </div>
+
+
+        <div class="foto-projeto quarto">
+            <img
+                src="imagens/quarto-1.jpg"
+                alt="Guarda-roupa planejado VF Marcenaria"
+                onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+                <small>QUARTO</small>
+                <h3>Guarda-Roupa Planejado</h3>
+                <p>Projeto feito para aproveitar melhor o espaço.</p>
+            </div>
+        </div>
+
+
+        <div class="foto-projeto sala">
+            <img
+                src="imagens/sala-1.jpg"
+                alt="Painel de televisão VF Marcenaria"
+                onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+                <small>SALA</small>
+                <h3>Painel de TV</h3>
+                <p>Design moderno e feito sob medida.</p>
+            </div>
+        </div>
+
+
+        <div class="foto-projeto banheiro">
+            <img
+                src="imagens/banheiro-1.jpg"
+                alt="Gabinete planejado VF Marcenaria"
+                onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+                <small>BANHEIRO</small>
+                <h3>Gabinete Planejado</h3>
+                <p>Funcionalidade e acabamento personalizado.</p>
+            </div>
+        </div>
+
+
+        <div class="foto-projeto cozinha">
+            <img
+                src="imagens/cozinha-2.jpg"
+                alt="Armários de cozinha VF Marcenaria"
+                onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+                <small>COZINHA</small>
+                <h3>Armários Sob Medida</h3>
+                <p>Projeto desenvolvido para cada ambiente.</p>
+            </div>
+        </div>
+
+
+        <div class="foto-projeto sala">
+            <img
+                src="imagens/sala-2.jpg"
+                alt="Rack planejado VF Marcenaria"
+                onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+                <small>SALA</small>
+                <h3>Rack Personalizado</h3>
+                <p>Marcenaria personalizada para sua sala.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- WHATSAPP -->
+
+    <div class="galeria-orcamento">
+
+        <h3>Gostou de algum projeto?</h3>
+
+        <p>
+            Entre em contato e solicite seu orçamento.
+        </p>
+
+        <a
+            href="https://wa.me/5531982331355?text=Olá%20VF%20Marcenaria!%20Vi%20a%20galeria%20do%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+            target="_blank">
+
+            Solicitar orçamento pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     VISUALIZADOR DA FOTO
+========================================= -->
+
+<div id="fotoModal" class="foto-modal" onclick="fecharFoto()">
+
+    <button class="fechar-foto" onclick="fecharFoto()">
+        ×
+    </button>
+
+    <img id="fotoGrande" src="" alt="Projeto VF Marcenaria">
+
+</div>
+
+
+<style>
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.vf-galeria{
+    padding:90px 6%;
+    background:#0d0c0a;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+
+/* CABEÇALHO */
+
+.galeria-cabecalho{
+    max-width:700px;
+    margin:0 auto 40px;
+    text-align:center;
+}
+
+.galeria-cabecalho span{
+    color:#c89b62;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.galeria-cabecalho h2{
+    margin:12px 0;
+
+    font-family:Georgia,serif;
+    font-size:45px;
+    font-weight:400;
+}
+
+.galeria-cabecalho p{
+    color:#a9a39c;
+    line-height:1.7;
+}
+
+
+/* FILTROS */
+
+.galeria-filtros{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    margin-bottom:40px;
+}
+
+.galeria-filtros button{
+    padding:11px 20px;
+
+    border:1px solid #453a30;
+    border-radius:30px;
+
+    background:transparent;
+    color:#ccc;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.galeria-filtros button:hover,
+.galeria-filtros button.ativo{
+    background:#c89b62;
+    color:#16110d;
+    border-color:#c89b62;
+}
+
+
+/* GRID */
+
+.galeria-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+
+/* CARD */
+
+.foto-projeto{
+    position:relative;
+
+    height:350px;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    background:#191613;
+
+    cursor:pointer;
+
+    animation:aparecer .4s ease;
+}
+
+.foto-projeto img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.foto-projeto:hover img{
+    transform:scale(1.08);
+}
+
+
+/* SOMBRA */
+
+.foto-projeto::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.90)
+    );
+
+    pointer-events:none;
+}
+
+
+/* INFORMAÇÕES */
+
+.foto-info{
+    position:absolute;
+
+    z-index:2;
+
+    left:22px;
+    right:22px;
+    bottom:22px;
+}
+
+.foto-info small{
+    color:#d7ad76;
+
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+.foto-info h3{
+    margin:7px 0;
+
+    font-family:Georgia,serif;
+
+    font-size:23px;
+}
+
+.foto-info p{
+    color:#c5c0ba;
+
+    font-size:12px;
+}
+
+
+/* ORÇAMENTO */
+
+.galeria-orcamento{
+    max-width:900px;
+
+    margin:60px auto 0;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:#18140f;
+
+    border:1px solid #403426;
+    border-radius:18px;
+}
+
+.galeria-orcamento h3{
+    font-family:Georgia,serif;
+
+    font-size:30px;
+}
+
+.galeria-orcamento p{
+    margin:10px 0 25px;
+
+    color:#aaa;
+}
+
+.galeria-orcamento a{
+    display:inline-block;
+
+    padding:15px 25px;
+
+    background:#25d366;
+    color:white;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.galeria-orcamento a:hover{
+    transform:translateY(-3px);
+
+    background:#1fbd59;
+}
+
+
+/* =========================================
+   FOTO GRANDE
+========================================= */
+
+.foto-modal{
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    background:rgba(0,0,0,.92);
+}
+
+.foto-modal.aberto{
+    display:flex;
+}
+
+.foto-modal img{
+    max-width:100%;
+    max-height:88vh;
+
+    border-radius:10px;
+
+    box-shadow:0 30px 100px rgba(0,0,0,.8);
+}
+
+.fechar-foto{
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    border:0;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    .galeria-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+    .vf-galeria{
+        padding:60px 20px;
+    }
+
+    .galeria-cabecalho h2{
+        font-size:34px;
+    }
+
+    .galeria-grid{
+        grid-template-columns:1fr;
+    }
+
+    .foto-projeto{
+        height:320px;
+    }
+
+    .galeria-orcamento{
+        padding:30px 20px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+/* =========================================
+   FILTRAR GALERIA
+========================================= */
+
+function filtrarGaleria(categoria, botao){
+
+    const projetos =
+    document.querySelectorAll(".foto-projeto");
+
+
+    projetos.forEach(function(projeto){
+
+        if(
+            categoria === "todos" ||
+            projeto.classList.contains(categoria)
+        ){
+
+            projeto.style.display = "block";
+
+        }else{
+
+            projeto.style.display = "none";
+
+        }
+
+    });
+
+
+    document
+    .querySelectorAll(".galeria-filtros button")
+    .forEach(function(btn){
+
+        btn.classList.remove("ativo");
+
+    });
+
+
+    botao.classList.add("ativo");
+
+}
+
+
+/* =========================================
+   ABRIR FOTO
+========================================= */
+
+function abrirFoto(imagem){
+
+    document
+    .getElementById("fotoGrande")
+    .src = imagem.src;
+
+
+    document
+    .getElementById("fotoModal")
+    .classList.add("aberto");
+
+}
+
+
+/* =========================================
+   FECHAR FOTO
+========================================= */
+
+function fecharFoto(){
+
+    document
+    .getElementById("fotoModal")
+    .classList.remove("aberto");
+
+}
+
+
+/* FECHAR COM ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+            fecharFoto();
+        }
+
+    }
+);
+
+</script>
+
 </html>
