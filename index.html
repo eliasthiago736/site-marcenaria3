@@ -1,1219 +1,3187 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="VF Marcenaria em Belo Horizonte MG. Móveis planejados, cozinhas, quartos, salas, banheiros e projetos personalizados.">
+
+<meta name="description"
+content="VF Marcenaria em Belo Horizonte. Móveis planejados, cozinhas, quartos, salas, banheiros e projetos personalizados.">
 
 <title>VF Marcenaria | Móveis Planejados em Belo Horizonte</title>
 
+
 <style>
+
+/* ========================================
+   CORES
+======================================== */
+
 :root{
+
     --preto:#0d0d0b;
     --preto2:#171713;
+    --preto3:#211c17;
+
     --madeira:#8c6239;
     --dourado:#c79a5b;
+
     --creme:#f4efe7;
-    --branco:#fff;
+    --branco:#ffffff;
+
     --cinza:#aaa59d;
+
     --verde:#25d366;
+
 }
+
+
+/* ========================================
+   CONFIGURAÇÃO GERAL
+======================================== */
 
 *{
+
     margin:0;
     padding:0;
+
     box-sizing:border-box;
+
 }
 
-html{scroll-behavior:smooth;}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
     background:var(--preto);
+
     color:white;
+
 }
 
-a{text-decoration:none;}
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+section{
+
+    padding:100px 8%;
+
+}
+
+
+/* ========================================
+   MENU
+======================================== */
 
 header{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
+
     z-index:1000;
+
     display:flex;
+
     justify-content:space-between;
     align-items:center;
+
     padding:18px 7%;
-    background:rgba(13,13,11,.94);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #2b2924;
+
+    background:
+    rgba(13,13,11,.94);
+
+    backdrop-filter:
+    blur(12px);
+
+    border-bottom:
+    1px solid #2b2924;
+
 }
+
 
 .logo{
+
     font-size:23px;
+
     font-weight:800;
+
     letter-spacing:2px;
+
 }
 
-.logo span{color:var(--dourado);}
+
+.logo span{
+
+    color:var(--dourado);
+
+}
+
 
 nav{
+
     display:flex;
+
     align-items:center;
-    gap:25px;
+
+    gap:22px;
+
 }
+
 
 nav a{
+
     color:#ddd;
+
     font-size:13px;
+
     transition:.3s;
+
 }
 
-nav a:hover{color:var(--dourado);}
+
+nav a:hover{
+
+    color:var(--dourado);
+
+}
+
 
 .menu-orcamento{
+
     padding:12px 18px;
-    background:var(--dourado);
-    color:#15120e!important;
+
+    background:
+    var(--dourado);
+
+    color:#15120e !important;
+
     font-weight:bold;
+
 }
 
-/* HERO */
+
+/* ========================================
+   HERO
+======================================== */
 
 .hero{
+
     min-height:100vh;
-    padding:130px 8% 80px;
+
+    padding:
+    130px 8% 80px;
+
     display:flex;
+
     align-items:center;
+
     background:
-        linear-gradient(90deg,rgba(8,8,7,.97),rgba(8,8,7,.55)),
-        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=90")
-        center/cover;
+
+    linear-gradient(
+        90deg,
+        rgba(8,8,7,.97),
+        rgba(8,8,7,.55)
+    ),
+
+    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=90")
+
+    center/cover;
+
 }
 
-.hero-conteudo{max-width:760px;}
+
+.hero-conteudo{
+
+    max-width:760px;
+
+}
+
 
 .mini{
+
     color:var(--dourado);
-    text-transform:uppercase;
+
+    text-transform:
+    uppercase;
+
     letter-spacing:4px;
+
     font-size:12px;
+
 }
+
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(50px,7vw,90px);
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:
+    clamp(50px,7vw,90px);
+
     line-height:1;
+
     font-weight:400;
-    margin:20px 0 25px;
+
+    margin:
+    20px 0 25px;
+
 }
 
-.hero h1 span{color:var(--dourado);}
+
+.hero h1 span{
+
+    color:var(--dourado);
+
+}
+
 
 .hero p{
+
     max-width:620px;
+
     color:#c9c4bc;
+
     font-size:18px;
+
     line-height:1.8;
+
     margin-bottom:35px;
+
 }
+
 
 .botoes{
+
     display:flex;
+
     gap:12px;
+
     flex-wrap:wrap;
+
 }
+
 
 .btn{
+
     display:inline-block;
-    padding:15px 22px;
-    border:1px solid var(--dourado);
+
+    padding:
+    15px 22px;
+
+    border:
+    1px solid var(--dourado);
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
-.btn:hover{transform:translateY(-3px);}
+
+.btn:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
 
 .btn-principal{
-    background:var(--dourado);
+
+    background:
+    var(--dourado);
+
     color:#111;
+
 }
 
-.btn-secundario{color:white;}
 
-/* SEÇÕES */
+.btn-secundario{
 
-section{padding:100px 8%;}
+    color:white;
+
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
 
 .titulo{
+
     max-width:730px;
+
     margin-bottom:55px;
+
 }
+
 
 .titulo small{
+
     color:var(--dourado);
-    text-transform:uppercase;
+
+    text-transform:
+    uppercase;
+
     letter-spacing:3px;
+
 }
+
 
 .titulo h2{
-    font-family:Georgia,serif;
-    font-size:clamp(36px,5vw,56px);
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:
+    clamp(36px,5vw,56px);
+
     font-weight:400;
+
     margin:12px 0;
+
 }
+
 
 .titulo p{
+
     color:var(--cinza);
+
     line-height:1.8;
+
 }
 
-/* SERVIÇOS */
 
-.servicos{background:#121210;}
+/* ========================================
+   SERVIÇOS
+======================================== */
+
+.servicos{
+
+    background:#121210;
+
+}
+
 
 .grid-servicos{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:20px;
+
 }
+
 
 .card{
+
     padding:35px;
+
     background:#191916;
-    border:1px solid #2c2b26;
+
+    border:
+    1px solid #2c2b26;
+
     transition:.3s;
+
 }
+
 
 .card:hover{
-    border-color:var(--dourado);
-    transform:translateY(-6px);
+
+    border-color:
+    var(--dourado);
+
+    transform:
+    translateY(-6px);
+
 }
 
-.card .icone{font-size:40px;}
+
+.card .icone{
+
+    font-size:40px;
+
+}
+
 
 .card h3{
-    margin:20px 0 12px;
-    font-family:Georgia,serif;
+
+    margin:
+    20px 0 12px;
+
+    font-family:
+    Georgia,
+    serif;
+
     font-size:25px;
+
     font-weight:400;
+
 }
+
 
 .card p{
+
     color:var(--cinza);
+
     line-height:1.7;
+
 }
 
-/* PROJETOS */
+
+/* ========================================
+   SOBRE
+======================================== */
+
+.sobre{
+
+    background:
+    var(--creme);
+
+    color:#29231d;
+
+}
+
+
+.sobre-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:65px;
+
+    align-items:center;
+
+}
+
+
+.sobre img{
+
+    width:100%;
+
+    height:540px;
+
+    object-fit:cover;
+
+}
+
+
+.sobre h2{
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:50px;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+
+}
+
+
+.sobre p{
+
+    color:#71675d;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+
+.check{
+
+    margin:12px 0;
+
+    font-weight:bold;
+
+}
+
+
+.check span{
+
+    color:var(--madeira);
+
+}
+
+
+/* ========================================
+   PROJETOS
+======================================== */
 
 .projetos-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:15px;
+
 }
+
 
 .projeto{
+
     height:420px;
+
     position:relative;
+
     overflow:hidden;
+
 }
+
 
 .projeto img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     transition:.5s;
+
 }
 
-.projeto:hover img{transform:scale(1.06);}
+
+.projeto:hover img{
+
+    transform:
+    scale(1.06);
+
+}
+
 
 .projeto-info{
+
     position:absolute;
+
     left:0;
     right:0;
     bottom:0;
-    padding:50px 25px 25px;
-    background:linear-gradient(transparent,rgba(0,0,0,.95));
+
+    padding:
+    50px 25px 25px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.95)
+    );
+
 }
+
 
 .projeto-info h3{
-    font-family:Georgia,serif;
+
+    font-family:
+    Georgia,
+    serif;
+
     font-size:25px;
+
 }
 
-/* SOBRE */
 
-.sobre{
-    background:var(--creme);
-    color:#29231d;
-}
-
-.sobre-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:65px;
-    align-items:center;
-}
-
-.sobre img{
-    width:100%;
-    height:540px;
-    object-fit:cover;
-}
-
-.sobre h2{
-    font-family:Georgia,serif;
-    font-size:50px;
-    font-weight:400;
-    margin-bottom:25px;
-}
-
-.sobre p{
-    color:#71675d;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.check{
-    margin:12px 0;
-    font-weight:bold;
-}
-
-.check span{color:var(--madeira);}
-
-/* PROCESSO */
+/* ========================================
+   PROCESSO
+======================================== */
 
 .processo{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:20px;
+
 }
+
 
 .passo{
-    border-top:1px solid #444;
-    padding:30px 10px;
+
+    border-top:
+    1px solid #444;
+
+    padding:
+    30px 10px;
+
 }
+
 
 .numero{
-    font-family:Georgia,serif;
+
+    font-family:
+    Georgia,
+    serif;
+
     color:var(--dourado);
+
     font-size:42px;
+
 }
 
-.passo h3{margin:15px 0;}
+
+.passo h3{
+
+    margin:
+    15px 0;
+
+}
+
 
 .passo p{
+
     color:var(--cinza);
+
     line-height:1.7;
+
 }
 
-/* ORÇAMENTO */
 
-.orcamento{background:#1c1915;}
+/* ========================================
+   ORÇAMENTO
+======================================== */
+
+.orcamento{
+
+    background:#1c1915;
+
+}
+
 
 .formulario{
+
     max-width:950px;
-    background:#f4efe8;
-    color:#30271f;
+
     padding:45px;
+
+    background:#f4efe8;
+
+    color:#30271f;
+
 }
+
 
 .form-grid{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:20px;
+
 }
+
 
 .campo{
+
     display:flex;
+
     flex-direction:column;
+
 }
 
-.campo.full{grid-column:1/-1;}
+
+.campo.full{
+
+    grid-column:1/-1;
+
+}
+
 
 .campo label{
-    font-size:12px;
-    font-weight:bold;
+
     margin-bottom:7px;
-    text-transform:uppercase;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    text-transform:
+    uppercase;
+
 }
+
 
 .campo input,
 .campo select,
 .campo textarea{
+
     width:100%;
+
     padding:14px;
+
     background:white;
-    border:1px solid #cec3b7;
+
+    border:
+    1px solid #cec3b7;
+
     outline:none;
+
     font-size:15px;
+
 }
+
 
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus{
-    border-color:var(--madeira);
+
+    border-color:
+    var(--madeira);
+
 }
+
 
 .campo textarea{
+
     min-height:130px;
+
     resize:vertical;
+
 }
+
 
 .enviar-orcamento{
+
     width:100%;
+
     padding:17px;
+
     margin-top:25px;
+
     border:0;
-    background:var(--madeira);
+
+    background:
+    var(--madeira);
+
     color:white;
+
     font-size:15px;
+
     font-weight:bold;
+
     cursor:pointer;
+
 }
 
-/* CONTATO */
+
+/* ========================================
+   GALERIA
+======================================== */
+
+.vf-galeria{
+
+    background:#0d0c0a;
+
+}
+
+
+.galeria-cabecalho{
+
+    max-width:700px;
+
+    margin:
+    0 auto 40px;
+
+    text-align:center;
+
+}
+
+
+.galeria-cabecalho span{
+
+    color:#c89b62;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+}
+
+
+.galeria-cabecalho h2{
+
+    margin:12px 0;
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:45px;
+
+    font-weight:400;
+
+}
+
+
+.galeria-cabecalho p{
+
+    color:#a9a39c;
+
+    line-height:1.7;
+
+}
+
+
+.galeria-filtros{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:40px;
+
+}
+
+
+.galeria-filtros button{
+
+    padding:
+    11px 20px;
+
+    border:
+    1px solid #453a30;
+
+    border-radius:30px;
+
+    background:transparent;
+
+    color:#ccc;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.galeria-filtros button:hover,
+.galeria-filtros button.ativo{
+
+    background:#c89b62;
+
+    color:#16110d;
+
+    border-color:#c89b62;
+
+}
+
+
+.galeria-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.foto-projeto{
+
+    position:relative;
+
+    height:350px;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    background:#191613;
+
+    cursor:pointer;
+
+}
+
+
+.foto-projeto img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+.foto-projeto:hover img{
+
+    transform:
+    scale(1.08);
+
+}
+
+
+.foto-projeto::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.90)
+    );
+
+    pointer-events:none;
+
+}
+
+
+.foto-info{
+
+    position:absolute;
+
+    z-index:2;
+
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+}
+
+
+.foto-info small{
+
+    color:#d7ad76;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+}
+
+
+.foto-info h3{
+
+    margin:7px 0;
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:23px;
+
+}
+
+
+.foto-info p{
+
+    color:#c5c0ba;
+
+    font-size:12px;
+
+}
+
+
+.galeria-orcamento{
+
+    max-width:900px;
+
+    margin:
+    60px auto 0;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:#18140f;
+
+    border:
+    1px solid #403426;
+
+    border-radius:18px;
+
+}
+
+
+.galeria-orcamento h3{
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:30px;
+
+}
+
+
+.galeria-orcamento p{
+
+    margin:
+    10px 0 25px;
+
+    color:#aaa;
+
+}
+
+
+.galeria-orcamento a{
+
+    display:inline-block;
+
+    padding:
+    15px 25px;
+
+    background:
+    var(--verde);
+
+    color:white;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+
+/* ========================================
+   MODAL DA FOTO
+======================================== */
+
+.foto-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    background:
+    rgba(0,0,0,.94);
+
+}
+
+
+.foto-modal.aberto{
+
+    display:flex;
+
+}
+
+
+.foto-modal img{
+
+    max-width:100%;
+    max-height:88vh;
+
+    border-radius:10px;
+
+}
+
+
+.fechar-foto{
+
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    border:0;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+
+/* ========================================
+   LOCALIZAÇÃO
+======================================== */
+
+.localizacao{
+
+    background:#121210;
+
+}
+
+
+.localizacao-topo{
+
+    max-width:700px;
+
+    margin:
+    0 auto 40px;
+
+    text-align:center;
+
+}
+
+
+.localizacao-topo span{
+
+    color:var(--dourado);
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+}
+
+
+.localizacao-topo h2{
+
+    margin:12px 0;
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:45px;
+
+    font-weight:400;
+
+}
+
+
+.localizacao-topo p{
+
+    color:var(--cinza);
+
+    line-height:1.7;
+
+}
+
+
+.mapa-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:
+    1px solid #403426;
+
+}
+
+
+.mapa-container iframe{
+
+    display:block;
+
+    width:100%;
+
+}
+
+
+.localizacao-botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:30px;
+
+}
+
+
+.localizacao-botoes a{
+
+    display:inline-block;
+
+    padding:
+    15px 24px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.btn-rota{
+
+    background:
+    var(--dourado);
+
+    color:#17110c;
+
+}
+
+
+.btn-whatsapp{
+
+    background:
+    var(--verde);
+
+    color:white;
+
+}
+
+
+/* ========================================
+   CONTATO
+   ESTA É A ÚLTIMA SEÇÃO
+======================================== */
+
+.contato{
+
+    background:#0d0d0b;
+
+}
+
+
+.contato .titulo{
+
+    margin-left:auto;
+    margin-right:auto;
+
+    text-align:center;
+
+}
+
 
 .contato-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:20px;
+
 }
+
 
 .contato-card{
+
     padding:35px;
+
     background:#181815;
-    border:1px solid #2d2b26;
+
+    border:
+    1px solid #2d2b26;
+
+    text-align:center;
+
+    transition:.3s;
+
 }
 
-.contato-card .icone{font-size:35px;}
+
+.contato-card:hover{
+
+    border-color:
+    var(--dourado);
+
+    transform:
+    translateY(-5px);
+
+}
+
+
+.contato-card .icone{
+
+    font-size:35px;
+
+}
+
 
 .contato-card h3{
-    color:var(--dourado);
-    margin:15px 0;
+
+    color:
+    var(--dourado);
+
+    margin:
+    15px 0;
+
 }
+
 
 .contato-card p{
-    color:var(--cinza);
+
+    color:
+    var(--cinza);
+
     line-height:1.8;
+
 }
+
 
 .whatsapp{
+
     display:inline-block;
+
     margin-top:15px;
-    padding:13px 18px;
-    background:var(--verde);
+
+    padding:
+    13px 18px;
+
+    background:
+    var(--verde);
+
     color:white;
+
     font-weight:bold;
+
+    border-radius:25px;
+
 }
 
-/* FOOTER */
+
+/* ========================================
+   RODAPÉ
+======================================== */
 
 footer{
+
     background:#080807;
-    padding:55px 8% 25px;
-    border-top:1px solid #292823;
+
+    padding:
+    55px 8% 25px;
+
+    border-top:
+    1px solid #292823;
+
 }
+
 
 .footer-grid{
+
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-columns:
+    2fr 1fr 1fr;
+
     gap:40px;
+
 }
 
+
 footer h3{
-    color:var(--dourado);
+
+    color:
+    var(--dourado);
+
     margin-bottom:15px;
+
 }
+
 
 footer p,
 footer a{
+
     color:#999;
+
     line-height:1.9;
+
 }
+
 
 .copy{
-    border-top:1px solid #222;
+
+    border-top:
+    1px solid #222;
+
     margin-top:40px;
+
     padding-top:20px;
+
     color:#666;
+
     font-size:12px;
+
     text-align:center;
+
 }
 
-/* ==========================
-   CHATBOT
-========================== */
+
+/* ========================================
+   BOTÃO ASSISTENTE
+======================================== */
 
 .vf-botao{
+
     position:fixed;
+
     right:25px;
     bottom:25px;
+
     z-index:9998;
-    height:64px;
-    padding:0 22px;
+
+    padding:
+    18px 22px;
+
     border:0;
+
     border-radius:40px;
-    background:var(--dourado);
+
+    background:
+    var(--dourado);
+
     color:#17120e;
+
     font-weight:bold;
+
     cursor:pointer;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    box-shadow:0 10px 40px rgba(0,0,0,.5);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.5);
+
 }
+
+
+/* ========================================
+   CHAT
+======================================== */
 
 .vf-chat{
+
     position:fixed;
+
     right:25px;
-    bottom:105px;
-    z-index:9999;
+    bottom:100px;
+
+    z-index:9998;
+
     width:390px;
-    height:610px;
-    max-height:calc(100vh - 130px);
+
+    max-width:
+    calc(100vw - 30px);
+
+    height:560px;
+
     display:none;
+
     flex-direction:column;
-    background:#eee9e2;
-    border-radius:20px;
+
     overflow:hidden;
-    box-shadow:0 25px 80px rgba(0,0,0,.65);
+
+    background:#eee9e2;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.65);
+
 }
 
-.vf-chat.aberto{display:flex;}
+
+.vf-chat.aberto{
+
+    display:flex;
+
+}
+
 
 .vf-topo{
+
     padding:17px;
+
     background:#211c17;
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
 }
+
 
 .vf-avatar{
+
     width:45px;
     height:45px;
-    background:var(--madeira);
-    border-radius:50%;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
+    border-radius:50%;
+
+    background:
+    var(--madeira);
+
     font-size:22px;
+
 }
 
-.vf-topo-info{flex:1;}
 
-.vf-topo-info strong{display:block;}
+.vf-topo-info{
+
+    flex:1;
+
+}
+
+
+.vf-topo-info strong{
+
+    display:block;
+
+}
+
 
 .vf-topo-info small{
+
     color:#88c68f;
-    display:block;
-    margin-top:3px;
+
 }
+
 
 .vf-fechar{
+
     border:0;
+
     background:none;
+
     color:white;
+
     font-size:28px;
+
     cursor:pointer;
+
 }
 
-.vf-progresso{
-    height:4px;
-    background:#3a332c;
-}
-
-.vf-progresso div{
-    width:0;
-    height:100%;
-    background:var(--dourado);
-    transition:.4s;
-}
 
 .vf-mensagens{
+
     flex:1;
+
     overflow-y:auto;
+
     padding:18px;
+
     color:#332b25;
+
 }
+
 
 .vf-msg{
-    max-width:83%;
-    padding:12px 14px;
+
+    max-width:85%;
+
+    padding:
+    12px 14px;
+
     margin-bottom:11px;
+
     border-radius:15px;
+
     font-size:13px;
+
     line-height:1.55;
+
 }
+
 
 .vf-robo{
+
     background:white;
-    border-bottom-left-radius:3px;
+
 }
+
 
 .vf-cliente{
-    background:var(--madeira);
-    color:white;
+
     margin-left:auto;
-    border-bottom-right-radius:3px;
+
+    background:
+    var(--madeira);
+
+    color:white;
+
 }
+
 
 .vf-opcoes{
+
     padding:10px;
+
     background:white;
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:6px;
+
 }
 
-.vf-opcoes:empty{display:none;}
 
 .vf-opcoes button{
-    padding:8px 11px;
-    border:1px solid var(--madeira);
+
+    padding:
+    8px 11px;
+
+    border:
+    1px solid var(--madeira);
+
     border-radius:20px;
+
     background:white;
+
     color:#67482d;
+
     cursor:pointer;
-    font-size:11px;
+
 }
+
 
 .vf-digitar{
+
     display:flex;
+
     gap:7px;
+
     padding:12px;
+
     background:white;
+
 }
+
 
 .vf-digitar input{
+
     flex:1;
+
     min-width:0;
+
     padding:12px;
-    border:1px solid #ccc;
+
+    border:
+    1px solid #ccc;
+
     border-radius:25px;
+
     outline:none;
+
 }
+
 
 .vf-digitar button{
+
     width:43px;
     height:43px;
+
     border:0;
+
     border-radius:50%;
-    background:var(--madeira);
+
+    background:
+    var(--madeira);
+
     color:white;
+
     cursor:pointer;
+
 }
 
-.vf-resumo{
-    padding:13px;
-    margin-top:10px;
-    background:#f5f0e9;
-    border:1px solid #d3c5b6;
-    border-radius:10px;
-    line-height:1.8;
-}
 
-.vf-whatsapp{
-    display:block;
-    padding:12px;
-    margin-top:12px;
-    background:var(--verde);
-    color:white;
-    text-align:center;
-    border-radius:25px;
-    font-weight:bold;
-}
-
-.vf-novo{
-    width:100%;
-    margin-top:8px;
-    padding:10px;
-    border:1px solid var(--madeira);
-    border-radius:25px;
-    background:white;
-    color:var(--madeira);
-    cursor:pointer;
-    font-weight:bold;
-}
+/* ========================================
+   RESPONSIVO
+======================================== */
 
 @media(max-width:900px){
-    nav a:not(.menu-orcamento){display:none;}
 
-    .grid-servicos,
-    .projetos-grid{grid-template-columns:1fr 1fr;}
+    nav a:not(.menu-orcamento){
 
-    .sobre-grid{grid-template-columns:1fr;}
+        display:none;
 
-    .processo{grid-template-columns:1fr 1fr;}
+    }
 
-    .contato-grid{grid-template-columns:1fr;}
-
-    .footer-grid{grid-template-columns:1fr;}
-}
-
-@media(max-width:600px){
-    section{padding:70px 6%;}
-
-    header{padding:15px 5%;}
-
-    .logo{font-size:17px;}
 
     .grid-servicos,
     .projetos-grid,
+    .galeria-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+
+    }
+
+
+    .sobre-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .processo{
+
+        grid-template-columns:
+        1fr 1fr;
+
+    }
+
+
+    .contato-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    section{
+
+        padding:
+        70px 6%;
+
+    }
+
+
+    header{
+
+        padding:
+        15px 5%;
+
+    }
+
+
+    .logo{
+
+        font-size:17px;
+
+    }
+
+
+    .grid-servicos,
+    .projetos-grid,
+    .galeria-grid,
     .processo,
     .form-grid{
+
         grid-template-columns:1fr;
+
     }
 
-    .campo.full{grid-column:auto;}
 
-    .formulario{padding:25px;}
+    .campo.full{
 
-    .projeto{height:340px;}
+        grid-column:auto;
+
+    }
+
+
+    .formulario{
+
+        padding:25px;
+
+    }
+
+
+    .projeto,
+    .foto-projeto{
+
+        height:330px;
+
+    }
+
+
+    .localizacao-topo h2,
+    .galeria-cabecalho h2{
+
+        font-size:34px;
+
+    }
+
+
+    .mapa-container iframe{
+
+        height:350px;
+
+    }
+
 
     .vf-botao{
+
         right:15px;
         bottom:15px;
-        width:60px;
-        padding:0;
-        justify-content:center;
-        font-size:22px;
+
     }
 
-    .vf-botao span{display:none;}
 
     .vf-chat{
+
         left:10px;
         right:10px;
         bottom:85px;
+
         width:auto;
-        height:72vh;
+
+        height:70vh;
+
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- ========================================
+     MENU
+======================================== -->
+
 <header>
-    <div class="logo">VF <span>MARCENARIA</span></div>
+
+    <div class="logo">
+
+        VF <span>MARCENARIA</span>
+
+    </div>
+
 
     <nav>
-        <a href="#inicio">Início</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-        <a href="#orcamento" class="menu-orcamento">Orçamento</a>
+
+        <a href="#inicio">
+            Início
+        </a>
+
+        <a href="#servicos">
+            Serviços
+        </a>
+
+        <a href="#projetos">
+            Projetos
+        </a>
+
+        <a href="#galeria">
+            Galeria
+        </a>
+
+        <a href="#contato">
+            Contato
+        </a>
+
+        <a
+        href="#orcamento"
+        class="menu-orcamento">
+
+            Orçamento
+
+        </a>
+
     </nav>
+
 </header>
 
 
-<section class="hero" id="inicio">
+<!-- ========================================
+     INÍCIO
+======================================== -->
+
+<section
+class="hero"
+id="inicio">
+
     <div class="hero-conteudo">
 
         <div class="mini">
+
             VF Marcenaria • Belo Horizonte - MG
+
         </div>
 
+
         <h1>
+
             Seu espaço.<br>
-            <span>Nosso projeto.</span>
+
+            <span>
+                Nosso projeto.
+            </span>
+
         </h1>
 
+
         <p>
+
             Móveis planejados e projetos personalizados
             para transformar ambientes em espaços funcionais,
             elegantes e feitos para você.
+
         </p>
+
 
         <div class="botoes">
 
-            <a href="#projetos" class="btn btn-principal">
-                Conhecer projetos
+            <a
+            href="#galeria"
+            class="btn btn-principal">
+
+                Ver nossos trabalhos
+
             </a>
 
-            <a href="#orcamento" class="btn btn-secundario">
+
+            <a
+            href="#orcamento"
+            class="btn btn-secundario">
+
                 Solicitar orçamento
+
             </a>
 
         </div>
 
     </div>
+
 </section>
 
 
-<section class="servicos" id="servicos">
+<!-- ========================================
+     SERVIÇOS
+======================================== -->
+
+<section
+class="servicos"
+id="servicos">
 
     <div class="titulo">
-        <small>Nossos serviços</small>
+
+        <small>
+            Nossos serviços
+        </small>
 
         <h2>
             Marcenaria para diferentes ambientes.
         </h2>
 
         <p>
-            Projetos personalizados para aproveitar melhor
-            cada espaço da sua casa ou empresa.
+            Projetos personalizados para aproveitar
+            melhor cada espaço.
         </p>
+
     </div>
+
 
     <div class="grid-servicos">
 
+
         <div class="card">
+
             <div class="icone">🍳</div>
+
             <h3>Cozinhas Planejadas</h3>
+
             <p>
-                Armários e soluções personalizadas para
-                organização e aproveitamento da cozinha.
+                Armários e soluções personalizadas
+                para sua cozinha.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="icone">🛏️</div>
+
             <h3>Quartos</h3>
+
             <p>
-                Guarda-roupas, cabeceiras, armários
-                e móveis desenvolvidos para seu espaço.
+                Guarda-roupas, cabeceiras,
+                armários e móveis planejados.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="icone">📺</div>
+
             <h3>Salas</h3>
+
             <p>
-                Painéis de TV, racks, estantes e
-                projetos personalizados.
+                Painéis de TV, racks,
+                estantes e projetos personalizados.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="icone">💻</div>
+
             <h3>Home Office</h3>
+
             <p>
-                Mesas, armários e espaços de trabalho
-                planejados para organização.
+                Mesas e espaços de trabalho
+                planejados.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="icone">🚿</div>
+
             <h3>Banheiros</h3>
+
             <p>
-                Gabinetes e móveis personalizados
-                para aproveitar melhor o ambiente.
+                Gabinetes e móveis
+                personalizados.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="icone">🪵</div>
+
             <h3>Projetos Especiais</h3>
+
             <p>
                 Conte sua ideia para avaliarmos
-                uma solução personalizada.
+                um projeto personalizado.
             </p>
+
         </div>
 
     </div>
+
 </section>
 
+
+<!-- ========================================
+     SOBRE
+======================================== -->
+
+<section
+class="sobre"
+id="sobre">
+
+    <div class="sobre-grid">
+
+        <img
+        src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1000&q=85"
+        alt="VF Marcenaria">
+
+
+        <div>
+
+            <h2>
+                VF Marcenaria
+            </h2>
+
+
+            <p>
+
+                Trabalhamos com projetos de marcenaria
+                personalizados para diferentes ambientes
+                e necessidades.
+
+            </p>
+
+
+            <p>
+
+                Nosso objetivo é unir aproveitamento
+                de espaço, funcionalidade e acabamento
+                em cada projeto.
+
+            </p>
+
+
+            <div class="check">
+                <span>✓</span>
+                Projetos personalizados
+            </div>
+
+
+            <div class="check">
+                <span>✓</span>
+                Móveis planejados
+            </div>
+
+
+            <div class="check">
+                <span>✓</span>
+                Diferentes acabamentos
+            </div>
+
+
+            <div class="check">
+                <span>✓</span>
+                Atendimento em Belo Horizonte
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     PROJETOS
+======================================== -->
 
 <section id="projetos">
 
     <div class="titulo">
-        <small>Projetos</small>
+
+        <small>
+            Projetos
+        </small>
 
         <h2>
             Ambientes que inspiram.
         </h2>
 
         <p>
-            Conheça alguns estilos de projetos de marcenaria.
+            Veja alguns estilos de projetos
+            de marcenaria.
         </p>
+
     </div>
+
 
     <div class="projetos-grid">
 
-        <div class="projeto">
-            <img
-                src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=900&q=85"
-                alt="Cozinha planejada">
-
-            <div class="projeto-info">
-                <h3>Cozinha Planejada</h3>
-            </div>
-        </div>
 
         <div class="projeto">
+
             <img
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
-                alt="Sala planejada">
+            src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=900&q=85"
+            alt="Cozinha planejada">
 
             <div class="projeto-info">
-                <h3>Sala Planejada</h3>
+
+                <h3>
+                    Cozinha Planejada
+                </h3>
+
             </div>
+
         </div>
+
 
         <div class="projeto">
+
             <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85"
-                alt="Projeto de marcenaria">
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
+            alt="Sala planejada">
 
             <div class="projeto-info">
-                <h3>Projeto Personalizado</h3>
+
+                <h3>
+                    Sala Planejada
+                </h3>
+
             </div>
+
         </div>
 
-    </div>
-</section>
 
+        <div class="projeto">
 
-<section class="sobre" id="sobre">
+            <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85"
+            alt="Projeto personalizado">
 
-    <div class="sobre-grid">
+            <div class="projeto-info">
 
-        <img
-            src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1000&q=85"
-            alt="Marcenaria">
+                <h3>
+                    Projeto Personalizado
+                </h3>
 
-        <div>
-
-            <h2>VF Marcenaria</h2>
-
-            <p>
-                Trabalhamos com projetos de marcenaria
-                personalizados para atender diferentes
-                ambientes e necessidades.
-            </p>
-
-            <p>
-                Nosso objetivo é unir aproveitamento de espaço,
-                funcionalidade e acabamento em cada projeto.
-            </p>
-
-            <div class="check">
-                <span>✓</span> Projetos personalizados
-            </div>
-
-            <div class="check">
-                <span>✓</span> Móveis planejados
-            </div>
-
-            <div class="check">
-                <span>✓</span> Diferentes acabamentos
-            </div>
-
-            <div class="check">
-                <span>✓</span> Atendimento em Belo Horizonte
             </div>
 
         </div>
 
     </div>
+
 </section>
 
+
+<!-- ========================================
+     COMO FUNCIONA
+======================================== -->
 
 <section>
 
     <div class="titulo">
-        <small>Como funciona</small>
-        <h2>Da ideia ao móvel pronto.</h2>
+
+        <small>
+            Como funciona
+        </small>
+
+        <h2>
+            Da ideia ao móvel pronto.
+        </h2>
+
     </div>
+
 
     <div class="processo">
 
-        <div class="passo">
-            <div class="numero">01</div>
-            <h3>Contato</h3>
-            <p>
-                Conte para a VF Marcenaria
-                o que você deseja fazer.
-            </p>
-        </div>
 
         <div class="passo">
-            <div class="numero">02</div>
-            <h3>Medidas e projeto</h3>
+
+            <div class="numero">
+                01
+            </div>
+
+            <h3>
+                Contato
+            </h3>
+
             <p>
-                Avaliamos o ambiente, as medidas
-                e as necessidades do projeto.
+                Conte o que você deseja fazer.
             </p>
+
         </div>
 
-        <div class="passo">
-            <div class="numero">03</div>
-            <h3>Produção</h3>
-            <p>
-                Após os detalhes serem definidos,
-                o projeto segue para produção.
-            </p>
-        </div>
 
         <div class="passo">
-            <div class="numero">04</div>
-            <h3>Instalação</h3>
+
+            <div class="numero">
+                02
+            </div>
+
+            <h3>
+                Medidas
+            </h3>
+
             <p>
-                O móvel é instalado conforme
-                as condições definidas no projeto.
+                Avaliamos o ambiente
+                e as medidas.
             </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">
+                03
+            </div>
+
+            <h3>
+                Produção
+            </h3>
+
+            <p>
+                O projeto segue para produção
+                depois da definição dos detalhes.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">
+                04
+            </div>
+
+            <h3>
+                Instalação
+            </h3>
+
+            <p>
+                Realizamos a etapa de instalação
+                conforme o projeto.
+            </p>
+
         </div>
 
     </div>
+
 </section>
 
 
-<section class="orcamento" id="orcamento">
+<!-- ========================================
+     ORÇAMENTO
+======================================== -->
+
+<section
+class="orcamento"
+id="orcamento">
 
     <div class="titulo">
-        <small>Orçamento</small>
 
-        <h2>Conte como será seu projeto.</h2>
+        <small>
+            Orçamento
+        </small>
+
+        <h2>
+            Conte como será seu projeto.
+        </h2>
 
         <p>
-            Preencha os dados abaixo e envie sua solicitação
-            diretamente para o WhatsApp da VF Marcenaria.
+
+            Preencha os dados e envie
+            diretamente para o WhatsApp
+            da VF Marcenaria.
+
         </p>
+
     </div>
 
-    <form class="formulario" onsubmit="enviarFormulario(event)">
+
+    <form
+    class="formulario"
+    onsubmit="enviarFormulario(event)">
 
         <div class="form-grid">
 
+
             <div class="campo">
+
                 <label>Nome</label>
+
                 <input
-                    id="formNome"
-                    type="text"
-                    required
-                    placeholder="Seu nome">
+                id="formNome"
+                type="text"
+                required
+                placeholder="Seu nome">
+
             </div>
 
+
             <div class="campo">
+
                 <label>Telefone</label>
+
                 <input
-                    id="formTelefone"
-                    type="tel"
-                    required
-                    placeholder="Seu WhatsApp">
+                id="formTelefone"
+                type="tel"
+                required
+                placeholder="Seu WhatsApp">
+
             </div>
 
+
             <div class="campo">
+
                 <label>Ambiente</label>
 
-                <select id="formAmbiente" required>
-                    <option value="">Selecione</option>
+                <select
+                id="formAmbiente"
+                required>
+
+                    <option value="">
+                        Selecione
+                    </option>
+
                     <option>Cozinha</option>
                     <option>Quarto</option>
                     <option>Sala</option>
                     <option>Banheiro</option>
                     <option>Escritório</option>
                     <option>Outro</option>
+
                 </select>
+
             </div>
 
+
             <div class="campo">
-                <label>Tipo de móvel</label>
+
+                <label>
+                    Tipo de móvel
+                </label>
 
                 <input
-                    id="formMovel"
-                    type="text"
-                    required
-                    placeholder="Ex.: Guarda-roupa">
+                id="formMovel"
+                type="text"
+                required
+                placeholder="Ex.: Guarda-roupa">
+
             </div>
 
+
             <div class="campo">
-                <label>Largura aproximada</label>
+
+                <label>
+                    Largura
+                </label>
 
                 <input
-                    id="formLargura"
-                    type="text"
-                    placeholder="Ex.: 2,40 m">
+                id="formLargura"
+                type="text"
+                placeholder="Ex.: 2,40 m">
+
             </div>
 
+
             <div class="campo">
-                <label>Altura aproximada</label>
+
+                <label>
+                    Altura
+                </label>
 
                 <input
-                    id="formAltura"
-                    type="text"
-                    placeholder="Ex.: 2,60 m">
+                id="formAltura"
+                type="text"
+                placeholder="Ex.: 2,60 m">
+
             </div>
 
+
             <div class="campo">
-                <label>Profundidade</label>
+
+                <label>
+                    Profundidade
+                </label>
 
                 <input
-                    id="formProfundidade"
-                    type="text"
-                    placeholder="Ex.: 60 cm">
+                id="formProfundidade"
+                type="text"
+                placeholder="Ex.: 60 cm">
+
             </div>
 
+
             <div class="campo">
-                <label>Acabamento</label>
+
+                <label>
+                    Acabamento
+                </label>
 
                 <select id="formAcabamento">
-                    <option>Ainda não sei</option>
-                    <option>MDF Branco</option>
-                    <option>Amadeirado</option>
-                    <option>Preto</option>
-                    <option>Cinza</option>
-                    <option>Outro</option>
+
+                    <option>
+                        Ainda não sei
+                    </option>
+
+                    <option>
+                        MDF Branco
+                    </option>
+
+                    <option>
+                        Amadeirado
+                    </option>
+
+                    <option>
+                        Preto
+                    </option>
+
+                    <option>
+                        Cinza
+                    </option>
+
+                    <option>
+                        Outro
+                    </option>
+
                 </select>
+
             </div>
 
+
             <div class="campo full">
-                <label>Detalhes do projeto</label>
+
+                <label>
+                    Detalhes
+                </label>
 
                 <textarea
-                    id="formDetalhes"
-                    placeholder="Ex.: quantidade de portas, gavetas, nichos, cores e outros detalhes..."></textarea>
+                id="formDetalhes"
+                placeholder="Conte mais detalhes do projeto..."></textarea>
+
             </div>
 
         </div>
 
-        <button class="enviar-orcamento" type="submit">
-            📱 Enviar orçamento para VF Marcenaria
+
+        <button
+        class="enviar-orcamento"
+        type="submit">
+
+            📱 Enviar orçamento pelo WhatsApp
+
         </button>
 
     </form>
+
 </section>
 
 
-<section id="contato">
+<!-- ========================================
+     GALERIA
+======================================== -->
+
+<section
+class="vf-galeria"
+id="galeria">
+
+    <div class="galeria-cabecalho">
+
+        <span>
+            VF MARCENARIA
+        </span>
+
+        <h2>
+            Nossos Projetos
+        </h2>
+
+        <p>
+
+            Conheça alguns trabalhos
+            e inspire-se para criar
+            seu próximo móvel planejado.
+
+        </p>
+
+    </div>
+
+
+    <div class="galeria-filtros">
+
+        <button
+        class="ativo"
+        onclick="filtrarGaleria('todos',this)">
+
+            Todos
+
+        </button>
+
+
+        <button
+        onclick="filtrarGaleria('cozinha',this)">
+
+            Cozinhas
+
+        </button>
+
+
+        <button
+        onclick="filtrarGaleria('quarto',this)">
+
+            Quartos
+
+        </button>
+
+
+        <button
+        onclick="filtrarGaleria('sala',this)">
+
+            Salas
+
+        </button>
+
+
+        <button
+        onclick="filtrarGaleria('banheiro',this)">
+
+            Banheiros
+
+        </button>
+
+    </div>
+
+
+    <div class="galeria-grid">
+
+
+        <div class="foto-projeto cozinha">
+
+            <img
+            src="imagens/cozinha-1.jpg"
+            alt="Cozinha planejada VF Marcenaria"
+            onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+
+                <small>
+                    COZINHA
+                </small>
+
+                <h3>
+                    Cozinha Planejada
+                </h3>
+
+                <p>
+                    Projeto personalizado.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto-projeto cozinha">
+
+            <img
+            src="imagens/cozinha-2.jpg"
+            alt="Cozinha VF Marcenaria"
+            onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+
+                <small>
+                    COZINHA
+                </small>
+
+                <h3>
+                    Armários Sob Medida
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto-projeto quarto">
+
+            <img
+            src="imagens/quarto-1.jpg"
+            alt="Quarto VF Marcenaria"
+            onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+
+                <small>
+                    QUARTO
+                </small>
+
+                <h3>
+                    Guarda-Roupa Planejado
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto-projeto sala">
+
+            <img
+            src="imagens/sala-1.jpg"
+            alt="Sala VF Marcenaria"
+            onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+
+                <small>
+                    SALA
+                </small>
+
+                <h3>
+                    Painel de TV
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto-projeto sala">
+
+            <img
+            src="imagens/sala-2.jpg"
+            alt="Rack VF Marcenaria"
+            onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+
+                <small>
+                    SALA
+                </small>
+
+                <h3>
+                    Rack Personalizado
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto-projeto banheiro">
+
+            <img
+            src="imagens/banheiro-1.jpg"
+            alt="Banheiro VF Marcenaria"
+            onclick="abrirFoto(this)">
+
+            <div class="foto-info">
+
+                <small>
+                    BANHEIRO
+                </small>
+
+                <h3>
+                    Gabinete Planejado
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="galeria-orcamento">
+
+        <h3>
+            Gostou de algum projeto?
+        </h3>
+
+        <p>
+            Solicite seu orçamento.
+        </p>
+
+        <a
+        href="https://wa.me/5531982331355?text=Olá%20VF%20Marcenaria!%20Vi%20a%20galeria%20e%20gostaria%20de%20solicitar%20um%20orçamento."
+        target="_blank"
+        rel="noopener">
+
+            📱 Solicitar orçamento
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOTO AMPLIADA -->
+
+<div
+id="fotoModal"
+class="foto-modal"
+onclick="fecharFoto()">
+
+    <button
+    class="fechar-foto"
+    onclick="fecharFoto()">
+
+        ×
+
+    </button>
+
+    <img
+    id="fotoGrande"
+    src=""
+    alt="Projeto VF Marcenaria">
+
+</div>
+
+
+<!-- ========================================
+     LOCALIZAÇÃO
+======================================== -->
+
+<section
+class="localizacao"
+id="localizacao">
+
+    <div class="localizacao-topo">
+
+        <span>
+            ONDE ESTAMOS
+        </span>
+
+        <h2>
+            Visite a VF Marcenaria
+        </h2>
+
+        <p>
+
+            Rua Luiz Castanhede, 55<br>
+            Belo Horizonte - MG
+
+        </p>
+
+    </div>
+
+
+    <div class="mapa-container">
+
+        <iframe
+        src="https://www.google.com/maps?q=Rua+Luiz+Castanhede+55,+Belo+Horizonte,+MG&output=embed"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+
+        </iframe>
+
+    </div>
+
+
+    <div class="localizacao-botoes">
+
+        <a
+        class="btn-rota"
+        href="https://www.google.com/maps/search/?api=1&query=Rua+Luiz+Castanhede+55,+Belo+Horizonte,+MG"
+        target="_blank"
+        rel="noopener">
+
+            📍 Abrir no Google Maps
+
+        </a>
+
+
+        <a
+        class="btn-whatsapp"
+        href="https://wa.me/5531982331355"
+        target="_blank"
+        rel="noopener">
+
+            📱 WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     CONTATO
+     ÚLTIMA SEÇÃO DA PÁGINA
+======================================== -->
+
+<section
+class="contato"
+id="contato">
 
     <div class="titulo">
-        <small>Contato</small>
-        <h2>Fale com a VF Marcenaria.</h2>
+
+        <small>
+            CONTATO
+        </small>
+
+        <h2>
+            Fale com a VF Marcenaria
+        </h2>
+
+        <p>
+
+            Entre em contato para conversar
+            sobre seu projeto.
+
+        </p>
+
     </div>
+
 
     <div class="contato-grid">
 
+
+        <!-- ENDEREÇO -->
+
         <div class="contato-card">
-            <div class="icone">📍</div>
-            <h3>Endereço</h3>
+
+            <div class="icone">
+                📍
+            </div>
+
+            <h3>
+                Endereço
+            </h3>
 
             <p>
+
                 Rua Luiz Castanhede, 55<br>
                 Belo Horizonte - MG
+
             </p>
+
+
+            <a
+            class="whatsapp"
+            style="background:#c79a5b;color:#17120e;"
+            href="https://www.google.com/maps/search/?api=1&query=Rua+Luiz+Castanhede+55,+Belo+Horizonte,+MG"
+            target="_blank"
+            rel="noopener">
+
+                Abrir localização
+
+            </a>
+
         </div>
 
+
+        <!-- EMAIL -->
+
         <div class="contato-card">
-            <div class="icone">✉️</div>
-            <h3>E-mail</h3>
+
+            <div class="icone">
+                ✉️
+            </div>
+
+            <h3>
+                E-mail
+            </h3>
 
             <p>
                 varneifernando2020@gmail.com
             </p>
 
+
             <a
-                class="whatsapp"
-                style="background:#8c6239"
-                href="mailto:varneifernando2020@gmail.com">
+            class="whatsapp"
+            style="background:#8c6239;"
+            href="mailto:varneifernando2020@gmail.com">
+
                 Enviar e-mail
+
             </a>
+
         </div>
 
+
+        <!-- WHATSAPP -->
+
         <div class="contato-card">
-            <div class="icone">📱</div>
-            <h3>WhatsApp</h3>
+
+            <div class="icone">
+                📱
+            </div>
+
+            <h3>
+                WhatsApp
+            </h3>
 
             <p>
                 +55 31 98233-1355
             </p>
 
+
             <a
-                class="whatsapp"
-                target="_blank"
-                href="https://wa.me/5531982331355?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20VF%20Marcenaria.">
+            class="whatsapp"
+            href="https://wa.me/5531982331355?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20VF%20Marcenaria."
+            target="_blank"
+            rel="noopener">
+
                 Falar no WhatsApp
+
             </a>
+
         </div>
 
     </div>
+
 </section>
 
+
+<!-- ========================================
+     RODAPÉ
+======================================== -->
 
 <footer>
 
     <div class="footer-grid">
 
         <div>
-            <h3>VF MARCENARIA</h3>
+
+            <h3>
+                VF MARCENARIA
+            </h3>
 
             <p>
-                Móveis planejados e projetos personalizados
-                em Belo Horizonte - MG.
+
+                Móveis planejados e projetos
+                personalizados em Belo Horizonte - MG.
+
             </p>
+
         </div>
 
-        <div>
-            <h3>Contato</h3>
-
-            <p>+55 31 98233-1355</p>
-
-            <a href="mailto:varneifernando2020@gmail.com">
-                varneifernando2020@gmail.com
-            </a>
-        </div>
 
         <div>
-            <h3>Endereço</h3>
+
+            <h3>
+                Contato
+            </h3>
 
             <p>
+                +55 31 98233-1355
+            </p>
+
+            <a
+            href="mailto:varneifernando2020@gmail.com">
+
+                varneifernando2020@gmail.com
+
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Endereço
+            </h3>
+
+            <p>
+
                 Rua Luiz Castanhede, 55<br>
                 Belo Horizonte - MG
+
             </p>
+
         </div>
 
     </div>
 
+
     <div class="copy">
-        © 2026 VF Marcenaria — Todos os direitos reservados.
+
+        © 2026 VF Marcenaria —
+        Todos os direitos reservados.
+
     </div>
 
 </footer>
 
 
-<!-- BOTÃO DO ASSISTENTE -->
+<!-- ========================================
+     BOTÃO DO ASSISTENTE
+======================================== -->
 
 <button
-    class="vf-botao"
-    id="vfBotao"
-    onclick="vfAbrir()">
+class="vf-botao"
+id="vfBotao"
+onclick="vfAbrir()">
 
-    🪵 <span>Solicitar orçamento</span>
+    🪵 Solicitar orçamento
 
 </button>
 
 
-<!-- CHAT -->
+<!-- ========================================
+     CHATBOT
+======================================== -->
 
-<div class="vf-chat" id="vfChat">
+<div
+class="vf-chat"
+id="vfChat">
 
     <div class="vf-topo">
 
-        <div class="vf-avatar">🪵</div>
-
-        <div class="vf-topo-info">
-            <strong>VF Assistente da Marcenaria</strong>
-            <small>● Assistente virtual online</small>
+        <div class="vf-avatar">
+            🪵
         </div>
 
-        <button class="vf-fechar" onclick="vfFechar()">
+        <div class="vf-topo-info">
+
+            <strong>
+                VF Assistente da Marcenaria
+            </strong>
+
+            <small>
+                ● Online
+            </small>
+
+        </div>
+
+        <button
+        class="vf-fechar"
+        onclick="vfFechar()">
+
             ×
+
         </button>
 
     </div>
 
-    <div class="vf-progresso">
-        <div id="vfBarra"></div>
-    </div>
 
-    <div class="vf-mensagens" id="vfMensagens">
+    <div
+    class="vf-mensagens"
+    id="vfMensagens">
 
         <div class="vf-msg vf-robo">
 
@@ -1221,33 +3189,45 @@ footer a{
 
             <br><br>
 
-            Sou o <strong>VF Assistente da Marcenaria</strong>.
+            Sou o
+            <strong>
+                VF Assistente da Marcenaria
+            </strong>.
 
             <br><br>
 
-            Vou ajudar você a preparar uma solicitação
-            de orçamento para a VF Marcenaria.
+            Posso ajudar você a solicitar
+            um orçamento.
 
             <br><br>
 
-            Para começar, <strong>qual é o seu nome?</strong>
+            Qual é o seu nome?
 
         </div>
 
     </div>
 
-    <div class="vf-opcoes" id="vfOpcoes"></div>
 
-    <div class="vf-digitar" id="vfDigitar">
+    <div
+    class="vf-opcoes"
+    id="vfOpcoes">
+    </div>
+
+
+    <div
+    class="vf-digitar"
+    id="vfDigitar">
 
         <input
-            id="vfEntrada"
-            type="text"
-            placeholder="Digite sua resposta..."
-            autocomplete="off"
-            onkeydown="vfEnter(event)">
+        id="vfEntrada"
+        type="text"
+        placeholder="Digite sua resposta..."
+        autocomplete="off"
+        onkeydown="vfEnter(event)">
 
-        <button onclick="vfEnviar()">➤</button>
+        <button onclick="vfEnviar()">
+            ➤
+        </button>
 
     </div>
 
@@ -1256,50 +3236,53 @@ footer a{
 
 <script>
 
-/* ==================================
-   DADOS DA VF MARCENARIA
-================================== */
+/* ========================================
+   CONFIGURAÇÃO
+======================================== */
 
-const WHATSAPP = "5531982331355";
+const WHATSAPP =
+"5531982331355";
 
 
-/* ==================================
+/* ========================================
    FORMULÁRIO
-================================== */
+======================================== */
 
 function enviarFormulario(event){
 
     event.preventDefault();
 
+
     const nome =
-        document.getElementById("formNome").value;
+    document.getElementById("formNome").value;
 
     const telefone =
-        document.getElementById("formTelefone").value;
+    document.getElementById("formTelefone").value;
 
     const ambiente =
-        document.getElementById("formAmbiente").value;
+    document.getElementById("formAmbiente").value;
 
     const movel =
-        document.getElementById("formMovel").value;
+    document.getElementById("formMovel").value;
 
     const largura =
-        document.getElementById("formLargura").value;
+    document.getElementById("formLargura").value;
 
     const altura =
-        document.getElementById("formAltura").value;
+    document.getElementById("formAltura").value;
 
     const profundidade =
-        document.getElementById("formProfundidade").value;
+    document.getElementById("formProfundidade").value;
 
     const acabamento =
-        document.getElementById("formAcabamento").value;
+    document.getElementById("formAcabamento").value;
 
     const detalhes =
-        document.getElementById("formDetalhes").value;
+    document.getElementById("formDetalhes").value;
 
 
     const mensagem =
+
 `Olá, VF Marcenaria! Gostaria de solicitar um orçamento.
 
 👤 Nome:
@@ -1329,166 +3312,313 @@ ${profundidade}
 ${acabamento}
 
 📝 Detalhes:
-${detalhes}
+${detalhes}`;
 
-Gostaria de receber mais informações sobre o projeto.`;
-
-
-    abrirWhatsApp(mensagem);
-}
-
-
-function abrirWhatsApp(mensagem){
 
     const url =
-        "https://wa.me/" +
-        WHATSAPP +
-        "?text=" +
-        encodeURIComponent(mensagem);
 
-    window.open(url,"_blank");
+    "https://wa.me/" +
+    WHATSAPP +
+    "?text=" +
+    encodeURIComponent(mensagem);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
 }
 
 
-/* ==================================
-   VF ASSISTENTE
-================================== */
+/* ========================================
+   GALERIA
+======================================== */
+
+function filtrarGaleria(
+    categoria,
+    botao
+){
+
+    const projetos =
+    document.querySelectorAll(
+        ".foto-projeto"
+    );
+
+
+    projetos.forEach(
+        function(projeto){
+
+            if(
+                categoria === "todos" ||
+                projeto.classList.contains(categoria)
+            ){
+
+                projeto.style.display =
+                "block";
+
+            }else{
+
+                projeto.style.display =
+                "none";
+
+            }
+
+        }
+    );
+
+
+    document
+    .querySelectorAll(
+        ".galeria-filtros button"
+    )
+    .forEach(
+        function(btn){
+
+            btn.classList.remove(
+                "ativo"
+            );
+
+        }
+    );
+
+
+    botao.classList.add(
+        "ativo"
+    );
+
+}
+
+
+function abrirFoto(imagem){
+
+    document
+    .getElementById("fotoGrande")
+    .src =
+    imagem.src;
+
+
+    document
+    .getElementById("fotoModal")
+    .classList.add(
+        "aberto"
+    );
+
+}
+
+
+function fecharFoto(){
+
+    document
+    .getElementById("fotoModal")
+    .classList.remove(
+        "aberto"
+    );
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            fecharFoto();
+
+        }
+
+    }
+);
+
+
+/* ========================================
+   CHATBOT
+======================================== */
 
 let vfEtapa = 0;
 
+
 const vfProjeto = {
+
     nome:"",
     ambiente:"",
     movel:"",
-    largura:"",
-    altura:"",
-    profundidade:"",
-    acabamento:"",
+    medidas:"",
     detalhes:""
+
 };
 
 
 function vfAbrir(){
 
     document
-        .getElementById("vfChat")
-        .classList.add("aberto");
+    .getElementById("vfChat")
+    .classList.add("aberto");
+
 
     document
-        .getElementById("vfBotao")
-        .style.display="none";
+    .getElementById("vfBotao")
+    .style.display =
+    "none";
 
-    setTimeout(function(){
-        document.getElementById("vfEntrada").focus();
-    },200);
 }
 
 
 function vfFechar(){
 
     document
-        .getElementById("vfChat")
-        .classList.remove("aberto");
+    .getElementById("vfChat")
+    .classList.remove("aberto");
+
 
     document
-        .getElementById("vfBotao")
-        .style.display="flex";
+    .getElementById("vfBotao")
+    .style.display =
+    "block";
+
 }
 
 
-function vfMensagem(texto,tipo){
+function vfMensagem(
+    texto,
+    tipo
+){
 
     const area =
-        document.getElementById("vfMensagens");
+    document.getElementById(
+        "vfMensagens"
+    );
+
 
     const div =
-        document.createElement("div");
+    document.createElement(
+        "div"
+    );
+
 
     div.className =
-        "vf-msg " + tipo;
+    "vf-msg " + tipo;
+
 
     div.innerHTML =
-        texto;
+    texto;
 
-    area.appendChild(div);
+
+    area.appendChild(
+        div
+    );
+
 
     area.scrollTop =
-        area.scrollHeight;
+    area.scrollHeight;
+
 }
 
 
 function vfEscapar(texto){
 
     const div =
-        document.createElement("div");
+    document.createElement(
+        "div"
+    );
 
-    div.textContent = texto;
+
+    div.textContent =
+    texto;
+
 
     return div.innerHTML;
-}
 
-
-function vfProgresso(){
-
-    const porcentagem =
-        Math.min((vfEtapa / 8) * 100,100);
-
-    document
-        .getElementById("vfBarra")
-        .style.width =
-        porcentagem + "%";
 }
 
 
 function vfMostrarOpcoes(lista){
 
     const area =
-        document.getElementById("vfOpcoes");
+    document.getElementById(
+        "vfOpcoes"
+    );
 
-    area.innerHTML="";
 
-    lista.forEach(function(opcao){
+    area.innerHTML =
+    "";
 
-        const botao =
-            document.createElement("button");
 
-        botao.textContent = opcao;
+    lista.forEach(
+        function(opcao){
 
-        botao.onclick = function(){
+            const botao =
+            document.createElement(
+                "button"
+            );
 
-            area.innerHTML="";
 
-            vfProcessar(opcao);
-        };
+            botao.textContent =
+            opcao;
 
-        area.appendChild(botao);
-    });
+
+            botao.onclick =
+            function(){
+
+                area.innerHTML =
+                "";
+
+                vfProcessar(
+                    opcao
+                );
+
+            };
+
+
+            area.appendChild(
+                botao
+            );
+
+        }
+    );
+
 }
 
 
 function vfEnviar(){
 
     const entrada =
-        document.getElementById("vfEntrada");
+    document.getElementById(
+        "vfEntrada"
+    );
+
 
     const resposta =
-        entrada.value.trim();
+    entrada.value.trim();
 
-    if(resposta===""){
+
+    if(resposta === ""){
+
         return;
+
     }
 
-    entrada.value="";
 
-    vfProcessar(resposta);
+    entrada.value =
+    "";
+
+
+    vfProcessar(
+        resposta
+    );
+
 }
 
 
 function vfEnter(event){
 
-    if(event.key==="Enter"){
+    if(event.key === "Enter"){
+
         vfEnviar();
+
     }
+
 }
 
 
@@ -1502,317 +3632,204 @@ function vfProcessar(resposta){
 
     /* NOME */
 
-    if(vfEtapa===0){
+    if(vfEtapa === 0){
 
-        vfProjeto.nome=resposta;
+        vfProjeto.nome =
+        resposta;
 
-        vfEtapa=1;
-        vfProgresso();
 
-        setTimeout(function(){
+        vfEtapa = 1;
 
-            vfMensagem(
-                `Prazer, <strong>${vfEscapar(vfProjeto.nome)}</strong>! 👋
-                <br><br>
-                Em qual ambiente você deseja fazer seu projeto?`,
-                "vf-robo"
-            );
 
-            vfMostrarOpcoes([
-                "🍳 Cozinha",
-                "🛏 Quarto",
-                "📺 Sala",
-                "🚿 Banheiro",
-                "💻 Escritório",
-                "Outro"
-            ]);
+        setTimeout(
+            function(){
 
-        },400);
+                vfMensagem(
+
+                    `Prazer,
+                    <strong>${vfEscapar(vfProjeto.nome)}</strong>!
+                    👋
+
+                    <br><br>
+
+                    Qual ambiente você deseja fazer?`,
+
+                    "vf-robo"
+
+                );
+
+
+                vfMostrarOpcoes([
+
+                    "Cozinha",
+                    "Quarto",
+                    "Sala",
+                    "Banheiro",
+                    "Escritório",
+                    "Outro"
+
+                ]);
+
+            },
+
+            350
+        );
+
 
         return;
+
     }
 
 
     /* AMBIENTE */
 
-    if(vfEtapa===1){
+    if(vfEtapa === 1){
 
-        vfProjeto.ambiente=resposta;
+        vfProjeto.ambiente =
+        resposta;
 
-        vfEtapa=2;
-        vfProgresso();
 
-        setTimeout(function(){
+        vfEtapa = 2;
 
-            vfMensagem(
-                `Ótimo! 🪵
-                <br><br>
-                Qual móvel você deseja fazer?`,
-                "vf-robo"
-            );
 
-            vfMostrarOpcoes([
-                "Guarda-roupa",
-                "Armário",
-                "Cozinha planejada",
-                "Painel de TV",
-                "Gabinete",
-                "Estante",
-                "Outro"
-            ]);
+        setTimeout(
+            function(){
 
-        },400);
+                vfMensagem(
+
+                    `Qual móvel você deseja fazer?
+
+                    <br><br>
+
+                    Exemplo: guarda-roupa,
+                    armário, painel ou gabinete.`,
+
+                    "vf-robo"
+
+                );
+
+            },
+
+            350
+        );
+
 
         return;
+
     }
 
 
     /* MÓVEL */
 
-    if(vfEtapa===2){
+    if(vfEtapa === 2){
 
-        vfProjeto.movel=resposta;
+        vfProjeto.movel =
+        resposta;
 
-        vfEtapa=3;
-        vfProgresso();
 
-        setTimeout(function(){
+        vfEtapa = 3;
 
-            vfMensagem(
-                `Agora vamos às medidas aproximadas. 📐
-                <br><br>
-                Qual é a <strong>largura</strong>?
-                <br><br>
-                Exemplo: 2,40 m`,
-                "vf-robo"
-            );
 
-        },400);
+        setTimeout(
+            function(){
+
+                vfMensagem(
+
+                    `📐 Informe as medidas aproximadas.
+
+                    <br><br>
+
+                    Exemplo:
+                    2,40 m de largura,
+                    2,60 m de altura
+                    e 60 cm de profundidade.`,
+
+                    "vf-robo"
+
+                );
+
+            },
+
+            350
+        );
+
 
         return;
+
     }
 
 
-    /* LARGURA */
+    /* MEDIDAS */
 
-    if(vfEtapa===3){
+    if(vfEtapa === 3){
 
-        vfProjeto.largura=resposta;
+        vfProjeto.medidas =
+        resposta;
 
-        vfEtapa=4;
-        vfProgresso();
 
-        setTimeout(function(){
+        vfEtapa = 4;
 
-            vfMensagem(
-                `Qual é a <strong>altura aproximada</strong>?
-                <br><br>
-                Exemplo: 2,60 m`,
-                "vf-robo"
-            );
 
-        },400);
+        setTimeout(
+            function(){
+
+                vfMensagem(
+
+                    `📝 Conte algum detalhe
+                    que deseja no projeto.
+
+                    <br><br>
+
+                    Se não tiver,
+                    digite "nenhum".`,
+
+                    "vf-robo"
+
+                );
+
+            },
+
+            350
+        );
+
 
         return;
-    }
 
-
-    /* ALTURA */
-
-    if(vfEtapa===4){
-
-        vfProjeto.altura=resposta;
-
-        vfEtapa=5;
-        vfProgresso();
-
-        setTimeout(function(){
-
-            vfMensagem(
-                `Qual é a <strong>profundidade aproximada</strong>?
-                <br><br>
-                Exemplo: 60 cm`,
-                "vf-robo"
-            );
-
-        },400);
-
-        return;
-    }
-
-
-    /* PROFUNDIDADE */
-
-    if(vfEtapa===5){
-
-        vfProjeto.profundidade=resposta;
-
-        vfEtapa=6;
-        vfProgresso();
-
-        setTimeout(function(){
-
-            vfMensagem(
-                `Perfeito! 🎨
-                <br><br>
-                Qual acabamento você prefere?`,
-                "vf-robo"
-            );
-
-            vfMostrarOpcoes([
-                "MDF Branco",
-                "Amadeirado",
-                "Preto",
-                "Cinza",
-                "Ainda não sei",
-                "Outro"
-            ]);
-
-        },400);
-
-        return;
-    }
-
-
-    /* ACABAMENTO */
-
-    if(vfEtapa===6){
-
-        vfProjeto.acabamento=resposta;
-
-        vfEtapa=7;
-        vfProgresso();
-
-        setTimeout(function(){
-
-            vfMensagem(
-                `Estamos quase terminando! 🙌
-                <br><br>
-                Conte algum detalhe especial do projeto.
-                <br><br>
-                Exemplo: portas, gavetas, nichos,
-                divisórias ou iluminação.
-                <br><br>
-                Se não tiver, digite <strong>nenhum</strong>.`,
-                "vf-robo"
-            );
-
-        },400);
-
-        return;
     }
 
 
     /* DETALHES */
 
-    if(vfEtapa===7){
+    if(vfEtapa === 4){
 
-        vfProjeto.detalhes=resposta;
+        vfProjeto.detalhes =
+        resposta;
 
-        vfEtapa=8;
-        vfProgresso();
 
-        setTimeout(vfFinalizar,500);
+        vfEtapa = 5;
+
+
+        setTimeout(
+            vfFinalizar,
+            350
+        );
+
     }
+
 }
 
 
 function vfFinalizar(){
 
     document
-        .getElementById("vfDigitar")
-        .style.display="none";
+    .getElementById("vfDigitar")
+    .style.display =
+    "none";
 
 
-    const resumo=`
+    const texto =
 
-        🎉 <strong>Solicitação preparada!</strong>
-
-        <br><br>
-
-        Confira os dados:
-
-        <div class="vf-resumo">
-
-            👤 <strong>Cliente</strong><br>
-            ${vfEscapar(vfProjeto.nome)}
-
-            <br><br>
-
-            🏠 <strong>Ambiente</strong><br>
-            ${vfEscapar(vfProjeto.ambiente)}
-
-            <br><br>
-
-            🪑 <strong>Móvel</strong><br>
-            ${vfEscapar(vfProjeto.movel)}
-
-            <br><br>
-
-            📐 <strong>Medidas aproximadas</strong><br>
-
-            Largura:
-            ${vfEscapar(vfProjeto.largura)}
-
-            <br>
-
-            Altura:
-            ${vfEscapar(vfProjeto.altura)}
-
-            <br>
-
-            Profundidade:
-            ${vfEscapar(vfProjeto.profundidade)}
-
-            <br><br>
-
-            🎨 <strong>Acabamento</strong><br>
-            ${vfEscapar(vfProjeto.acabamento)}
-
-            <br><br>
-
-            📝 <strong>Detalhes</strong><br>
-            ${vfEscapar(vfProjeto.detalhes)}
-
-        </div>
-
-        <br>
-
-        As medidas são aproximadas e deverão ser
-        conferidas antes da fabricação.
-
-        <a
-            href="${vfLinkWhatsApp()}"
-            target="_blank"
-            class="vf-whatsapp">
-
-            📱 Enviar para VF Marcenaria
-
-        </a>
-
-        <button
-            class="vf-novo"
-            onclick="vfReiniciar()">
-
-            ↻ Fazer outro orçamento
-
-        </button>
-    `;
-
-
-    vfMensagem(
-        resumo,
-        "vf-robo"
-    );
-}
-
-
-function vfLinkWhatsApp(){
-
-    const texto=
 `Olá, VF Marcenaria! Gostaria de solicitar um orçamento.
-
-🪵 PROJETO DE MARCENARIA
 
 👤 Cliente:
 ${vfProjeto.nome}
@@ -1823,664 +3840,115 @@ ${vfProjeto.ambiente}
 🪑 Móvel:
 ${vfProjeto.movel}
 
-📐 MEDIDAS APROXIMADAS
-
-Largura:
-${vfProjeto.largura}
-
-Altura:
-${vfProjeto.altura}
-
-Profundidade:
-${vfProjeto.profundidade}
-
-🎨 Acabamento:
-${vfProjeto.acabamento}
+📐 Medidas aproximadas:
+${vfProjeto.medidas}
 
 📝 Detalhes:
-${vfProjeto.detalhes}
+${vfProjeto.detalhes}`;
 
-Gostaria de receber mais informações sobre o projeto.`;
 
-    return(
-        "https://wa.me/" +
-        WHATSAPP +
-        "?text=" +
-        encodeURIComponent(texto)
+    const link =
+
+    "https://wa.me/" +
+    WHATSAPP +
+    "?text=" +
+    encodeURIComponent(texto);
+
+
+    vfMensagem(
+
+        `🎉 <strong>Pronto!</strong>
+
+        <br><br>
+
+        Sua solicitação foi preparada.
+
+        <br><br>
+
+        <a
+        href="${link}"
+        target="_blank"
+        style="
+        display:block;
+        background:#25d366;
+        color:white;
+        padding:13px;
+        border-radius:25px;
+        text-align:center;
+        font-weight:bold;
+        ">
+
+            📱 Enviar para VF Marcenaria
+
+        </a>
+
+        <br>
+
+        <button
+        onclick="vfReiniciar()"
+        style="
+        width:100%;
+        padding:11px;
+        border:1px solid #8c6239;
+        border-radius:25px;
+        background:white;
+        color:#8c6239;
+        cursor:pointer;
+        ">
+
+            ↻ Novo orçamento
+
+        </button>`,
+
+        "vf-robo"
+
     );
+
 }
 
 
 function vfReiniciar(){
 
-    vfEtapa=0;
+    vfEtapa = 0;
 
-    vfProjeto.nome="";
-    vfProjeto.ambiente="";
-    vfProjeto.movel="";
-    vfProjeto.largura="";
-    vfProjeto.altura="";
-    vfProjeto.profundidade="";
-    vfProjeto.acabamento="";
-    vfProjeto.detalhes="";
 
-    vfProgresso();
+    vfProjeto.nome = "";
+    vfProjeto.ambiente = "";
+    vfProjeto.movel = "";
+    vfProjeto.medidas = "";
+    vfProjeto.detalhes = "";
+
 
     document
-        .getElementById("vfOpcoes")
-        .innerHTML="";
+    .getElementById("vfMensagens")
+    .innerHTML =
+
+    `<div class="vf-msg vf-robo">
+
+        Vamos começar novamente! 🪵
+
+        <br><br>
+
+        Qual é o seu nome?
+
+    </div>`;
+
 
     document
-        .getElementById("vfMensagens")
-        .innerHTML=`
-            <div class="vf-msg vf-robo">
-                Vamos começar um novo projeto! 🪵
-                <br><br>
-                Qual é o seu nome?
-            </div>
-        `;
+    .getElementById("vfOpcoes")
+    .innerHTML =
+    "";
+
 
     document
-        .getElementById("vfDigitar")
-        .style.display="flex";
+    .getElementById("vfDigitar")
+    .style.display =
+    "flex";
 
-    document
-        .getElementById("vfEntrada")
-        .focus();
 }
 
 </script>
+
 
 </body>
-<!-- =========================================
-     GALERIA VF MARCENARIA
-========================================= -->
-
-<section class="vf-galeria" id="galeria">
-
-    <div class="galeria-cabecalho">
-        <span>VF MARCENARIA</span>
-        <h2>Nossos Projetos</h2>
-        <p>
-            Conheça alguns dos nossos trabalhos e inspire-se
-            para criar seu próximo móvel planejado.
-        </p>
-    </div>
-
-    <!-- FILTROS -->
-
-    <div class="galeria-filtros">
-        <button class="ativo" onclick="filtrarGaleria('todos', this)">
-            Todos
-        </button>
-
-        <button onclick="filtrarGaleria('cozinha', this)">
-            Cozinhas
-        </button>
-
-        <button onclick="filtrarGaleria('quarto', this)">
-            Quartos
-        </button>
-
-        <button onclick="filtrarGaleria('sala', this)">
-            Salas
-        </button>
-
-        <button onclick="filtrarGaleria('banheiro', this)">
-            Banheiros
-        </button>
-    </div>
-
-
-    <!-- FOTOS -->
-
-    <div class="galeria-grid">
-
-        <div class="foto-projeto cozinha">
-            <img
-                src="imagens/cozinha-1.jpg"
-                alt="Cozinha planejada VF Marcenaria"
-                onclick="abrirFoto(this)">
-
-            <div class="foto-info">
-                <small>COZINHA</small>
-                <h3>Cozinha Planejada</h3>
-                <p>Móveis personalizados e acabamento premium.</p>
-            </div>
-        </div>
-
-
-        <div class="foto-projeto quarto">
-            <img
-                src="imagens/quarto-1.jpg"
-                alt="Guarda-roupa planejado VF Marcenaria"
-                onclick="abrirFoto(this)">
-
-            <div class="foto-info">
-                <small>QUARTO</small>
-                <h3>Guarda-Roupa Planejado</h3>
-                <p>Projeto feito para aproveitar melhor o espaço.</p>
-            </div>
-        </div>
-
-
-        <div class="foto-projeto sala">
-            <img
-                src="imagens/sala-1.jpg"
-                alt="Painel de televisão VF Marcenaria"
-                onclick="abrirFoto(this)">
-
-            <div class="foto-info">
-                <small>SALA</small>
-                <h3>Painel de TV</h3>
-                <p>Design moderno e feito sob medida.</p>
-            </div>
-        </div>
-
-
-        <div class="foto-projeto banheiro">
-            <img
-                src="imagens/banheiro-1.jpg"
-                alt="Gabinete planejado VF Marcenaria"
-                onclick="abrirFoto(this)">
-
-            <div class="foto-info">
-                <small>BANHEIRO</small>
-                <h3>Gabinete Planejado</h3>
-                <p>Funcionalidade e acabamento personalizado.</p>
-            </div>
-        </div>
-
-
-        <div class="foto-projeto cozinha">
-            <img
-                src="imagens/cozinha-2.jpg"
-                alt="Armários de cozinha VF Marcenaria"
-                onclick="abrirFoto(this)">
-
-            <div class="foto-info">
-                <small>COZINHA</small>
-                <h3>Armários Sob Medida</h3>
-                <p>Projeto desenvolvido para cada ambiente.</p>
-            </div>
-        </div>
-
-
-        <div class="foto-projeto sala">
-            <img
-                src="imagens/sala-2.jpg"
-                alt="Rack planejado VF Marcenaria"
-                onclick="abrirFoto(this)">
-
-            <div class="foto-info">
-                <small>SALA</small>
-                <h3>Rack Personalizado</h3>
-                <p>Marcenaria personalizada para sua sala.</p>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- WHATSAPP -->
-
-    <div class="galeria-orcamento">
-
-        <h3>Gostou de algum projeto?</h3>
-
-        <p>
-            Entre em contato e solicite seu orçamento.
-        </p>
-
-        <a
-            href="https://wa.me/5531982331355?text=Olá%20VF%20Marcenaria!%20Vi%20a%20galeria%20do%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-            target="_blank">
-
-            Solicitar orçamento pelo WhatsApp
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     VISUALIZADOR DA FOTO
-========================================= -->
-
-<div id="fotoModal" class="foto-modal" onclick="fecharFoto()">
-
-    <button class="fechar-foto" onclick="fecharFoto()">
-        ×
-    </button>
-
-    <img id="fotoGrande" src="" alt="Projeto VF Marcenaria">
-
-</div>
-
-
-<style>
-
-/* =========================================
-   GALERIA
-========================================= */
-
-.vf-galeria{
-    padding:90px 6%;
-    background:#0d0c0a;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-
-/* CABEÇALHO */
-
-.galeria-cabecalho{
-    max-width:700px;
-    margin:0 auto 40px;
-    text-align:center;
-}
-
-.galeria-cabecalho span{
-    color:#c89b62;
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:4px;
-}
-
-.galeria-cabecalho h2{
-    margin:12px 0;
-
-    font-family:Georgia,serif;
-    font-size:45px;
-    font-weight:400;
-}
-
-.galeria-cabecalho p{
-    color:#a9a39c;
-    line-height:1.7;
-}
-
-
-/* FILTROS */
-
-.galeria-filtros{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-
-    margin-bottom:40px;
-}
-
-.galeria-filtros button{
-    padding:11px 20px;
-
-    border:1px solid #453a30;
-    border-radius:30px;
-
-    background:transparent;
-    color:#ccc;
-
-    cursor:pointer;
-    transition:.3s;
-}
-
-.galeria-filtros button:hover,
-.galeria-filtros button.ativo{
-    background:#c89b62;
-    color:#16110d;
-    border-color:#c89b62;
-}
-
-
-/* GRID */
-
-.galeria-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-}
-
-
-/* CARD */
-
-.foto-projeto{
-    position:relative;
-
-    height:350px;
-
-    overflow:hidden;
-
-    border-radius:15px;
-
-    background:#191613;
-
-    cursor:pointer;
-
-    animation:aparecer .4s ease;
-}
-
-.foto-projeto img{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.5s;
-}
-
-.foto-projeto:hover img{
-    transform:scale(1.08);
-}
-
-
-/* SOMBRA */
-
-.foto-projeto::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-    linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,.90)
-    );
-
-    pointer-events:none;
-}
-
-
-/* INFORMAÇÕES */
-
-.foto-info{
-    position:absolute;
-
-    z-index:2;
-
-    left:22px;
-    right:22px;
-    bottom:22px;
-}
-
-.foto-info small{
-    color:#d7ad76;
-
-    font-size:10px;
-    letter-spacing:3px;
-}
-
-.foto-info h3{
-    margin:7px 0;
-
-    font-family:Georgia,serif;
-
-    font-size:23px;
-}
-
-.foto-info p{
-    color:#c5c0ba;
-
-    font-size:12px;
-}
-
-
-/* ORÇAMENTO */
-
-.galeria-orcamento{
-    max-width:900px;
-
-    margin:60px auto 0;
-
-    padding:40px;
-
-    text-align:center;
-
-    background:#18140f;
-
-    border:1px solid #403426;
-    border-radius:18px;
-}
-
-.galeria-orcamento h3{
-    font-family:Georgia,serif;
-
-    font-size:30px;
-}
-
-.galeria-orcamento p{
-    margin:10px 0 25px;
-
-    color:#aaa;
-}
-
-.galeria-orcamento a{
-    display:inline-block;
-
-    padding:15px 25px;
-
-    background:#25d366;
-    color:white;
-
-    border-radius:30px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    transition:.3s;
-}
-
-.galeria-orcamento a:hover{
-    transform:translateY(-3px);
-
-    background:#1fbd59;
-}
-
-
-/* =========================================
-   FOTO GRANDE
-========================================= */
-
-.foto-modal{
-    position:fixed;
-
-    inset:0;
-
-    z-index:9999;
-
-    display:none;
-
-    align-items:center;
-    justify-content:center;
-
-    padding:30px;
-
-    background:rgba(0,0,0,.92);
-}
-
-.foto-modal.aberto{
-    display:flex;
-}
-
-.foto-modal img{
-    max-width:100%;
-    max-height:88vh;
-
-    border-radius:10px;
-
-    box-shadow:0 30px 100px rgba(0,0,0,.8);
-}
-
-.fechar-foto{
-    position:absolute;
-
-    top:20px;
-    right:30px;
-
-    border:0;
-
-    background:transparent;
-
-    color:white;
-
-    font-size:45px;
-
-    cursor:pointer;
-}
-
-
-/* ANIMAÇÃO */
-
-@keyframes aparecer{
-
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-
-/* TABLET */
-
-@media(max-width:900px){
-
-    .galeria-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-
-/* CELULAR */
-
-@media(max-width:600px){
-
-    .vf-galeria{
-        padding:60px 20px;
-    }
-
-    .galeria-cabecalho h2{
-        font-size:34px;
-    }
-
-    .galeria-grid{
-        grid-template-columns:1fr;
-    }
-
-    .foto-projeto{
-        height:320px;
-    }
-
-    .galeria-orcamento{
-        padding:30px 20px;
-    }
-
-}
-
-</style>
-
-
-<script>
-
-/* =========================================
-   FILTRAR GALERIA
-========================================= */
-
-function filtrarGaleria(categoria, botao){
-
-    const projetos =
-    document.querySelectorAll(".foto-projeto");
-
-
-    projetos.forEach(function(projeto){
-
-        if(
-            categoria === "todos" ||
-            projeto.classList.contains(categoria)
-        ){
-
-            projeto.style.display = "block";
-
-        }else{
-
-            projeto.style.display = "none";
-
-        }
-
-    });
-
-
-    document
-    .querySelectorAll(".galeria-filtros button")
-    .forEach(function(btn){
-
-        btn.classList.remove("ativo");
-
-    });
-
-
-    botao.classList.add("ativo");
-
-}
-
-
-/* =========================================
-   ABRIR FOTO
-========================================= */
-
-function abrirFoto(imagem){
-
-    document
-    .getElementById("fotoGrande")
-    .src = imagem.src;
-
-
-    document
-    .getElementById("fotoModal")
-    .classList.add("aberto");
-
-}
-
-
-/* =========================================
-   FECHAR FOTO
-========================================= */
-
-function fecharFoto(){
-
-    document
-    .getElementById("fotoModal")
-    .classList.remove("aberto");
-
-}
-
-
-/* FECHAR COM ESC */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "Escape"){
-            fecharFoto();
-        }
-
-    }
-);
-
-</script>
-
 </html>
